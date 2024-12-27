@@ -134,7 +134,6 @@
               <ul>
                 <li><strong>Title</strong>: N/A</li>
                 <li><strong>Category</strong>: N/A</li>
-                <li><strong>Client</strong>: N/A</li>
                 <li><strong>Project date</strong>: N/A</li>
                 <li><strong>Project URL</strong>: N/A</li>
               </ul>
@@ -200,32 +199,38 @@
         parkar: {
           title: "Parkar Spot",
           category: "Parking App",
-          client: "Personal Project",
           date: "2024",
           url: "https://parkarspot.in",
           description:
-            "Parkar is a parking application where users can find nearby parking spots and upload their parking spaces for others to use.",
-          images: ["assets/img/portfolio/app-1.png"],
+            "Parkar Spot is an innovative parking application designed to streamline the process of finding and booking parking spaces and expose unused parking space.\n Enables users to locate and book available parking spots nearby.\n\nAllows users to list their own parking spaces. Facilitates both finding and offering parking spaces, enhancing user engagement and utility\n\nImproved urban parking management, reduced parking search time, decreased traffic congestion in market areas, and provided a platform for monetizing unused parking spaces.",
+          images: ["assets/img/app/app-1.png"],
         },
         turno: {
           title: "Turno",
           category: "Food Order App",
-          client: "Local Restaurant",
           date: "2023",
           url: "https://www.7thhole.com/",
           description:
             "Turno is a food order application that allows users to search restaurants, browse menus, place orders, and make payments online.",
-          images: ["assets/img/portfolio/app-2.png"],
+          images: ["assets/img/app/app-2.png"],
         },
         wellness: {
           title: "Wellness Wits",
           category: "Health App",
-          client: "Health Organization",
           date: "2021",
           url: "https://wellnesswits.com",
           description:
             "Wellness Wits is a health-related application where users can book appointments, join health programs, and set daily goals for exercise and activities.",
-          images: ["assets/img/portfolio/app-3.png"],
+          images: ["assets/img/app/app-3.png"],
+        },
+        tapisseries: {
+          title: "Tapisseries",
+          category: "Hair Stylish App",
+          date: "2021",
+          url: "",
+          description:
+            " Tapistre is a Hairstyle Related Application. Where users can Login/Signup by Email or Social Login Like Gmail, or Facebook. The user has to answer some questions and then the application suggests some Hair stylists and Posts according to those answers. Users can also like and comment, share. Also, they can able  to save other user posts. Users can talk with Hairstylists users can follow each other. ",
+          images: ["assets/img/app/app-4.png"],
         },
       };
 
@@ -238,7 +243,6 @@
         document.querySelector(".portfolio-info ul").innerHTML = `
           <li><strong>Title</strong>: ${details.title}</li>
           <li><strong>Category</strong>: ${details.category}</li>
-          <li><strong>Client</strong>: ${details.client}</li>
           <li><strong>Project date</strong>: ${details.date}</li>
           <li><strong>Project URL</strong>: <a href="${details.url}" target="_blank">${details.url}</a></li>
         `;
