@@ -72,7 +72,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <p>I'm <span class="typed" data-typed-items="Developer, Freelancer">Software Developer</span><span
@@ -407,32 +407,27 @@
           </div>
 
           <div class="col-lg-7">
-            <form
-              action="https://script.google.com/macros/s/AKfycbwcTVu3L8sg9JIWUx9o5m8Qb6Xk-VN8ltpW8ErwA9eC2c8RWA7_5uxn1YapfnGCkauf/exec"
-              id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contactForm" class="php-email-form" method="POST" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="" value="Vishal Jadon">
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
                 </div>
 
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required=""
-                    value="vishaljadon2050@gmail.com">
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
                 </div>
 
                 <div class="col-md-12">
                   <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required=""
-                    value="Test Form">
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
                 </div>
 
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field"
-                    required="">This test message</textarea>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -492,7 +487,7 @@
   <script>
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevent default form submission
+      e.preventDefault();
 
       const loading = document.querySelector('.loading');
       const sentMessage = document.querySelector('.sent-message');
@@ -504,7 +499,7 @@
 
       const formData = new FormData(form);
 
-      fetch('https://script.google.com/macros/s/AKfycbwcTVu3L8sg9JIWUx9o5m8Qb6Xk-VN8ltpW8ErwA9eC2c8RWA7_5uxn1YapfnGCkauf/exec', { // Replace with your Apps Script URL
+      fetch('https://script.google.com/macros/s/AKfycbzKNyeLfkrOQI4XsYV58guvWNT_smTgeqEk7FqkB2nzdOgtgBiZ-wY7kAj__CbIOa2B/exec', {
         method: 'POST',
         body: new URLSearchParams(formData)
       })

@@ -1,11 +1,3 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -227,3 +219,42 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function onSubmitSendMessage(){
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const loading = document.querySelector('.loading');
+    const sentMessage = document.querySelector('.sent-message');
+    const errorMessage = document.querySelector('.error-message');
+
+    loading.style.display = 'block';
+    sentMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+
+    const formData = new FormData(form);
+
+    fetch('https://script.google.com/macros/s/AKfycbzKNyeLfkrOQI4XsYV58guvWNT_smTgeqEk7FqkB2nzdOgtgBiZ-wY7kAj__CbIOa2B/exec', {
+      method: 'POST',
+      body: new URLSearchParams(formData)
+    })
+      .then(response => response.text())
+      .then(data => {
+        loading.style.display = 'none';
+        if (data === 'success') {
+          sentMessage.style.display = 'block';
+          form.reset(); // Clear the form
+        } else {
+          errorMessage.textContent = 'An error occurred. Please try again later.';
+          errorMessage.style.display = 'block';
+        }
+      })
+      .catch(error => {
+        loading.style.display = 'none';
+        errorMessage.textContent = 'An error occurred. Please try again later.';
+        errorMessage.style.display = 'block';
+        console.error('Error:', error);
+      });
+  });
+};

@@ -544,7 +544,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 75vh;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -555,9 +555,9 @@ section,
 .hero img {
   position: absolute;
   inset: 0;
-  display: block;
+  display: flex;
   width: 100%;
-  height: 100%;
+  height: 550px;
   object-fit: cover;
   z-index: 1;
 }
@@ -575,12 +575,6 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-}
-
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
@@ -591,28 +585,7 @@ section,
   border-bottom: 2px solid var(--accent-color);
 }
 
-.hero .social-links {
-  margin-top: 25px;
-}
-
-.hero .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.hero .social-links a:hover {
-  color: var(--accent-color);
-}
-
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
   .hero p {
     font-size: 20px;
   }
@@ -626,31 +599,14 @@ section,
   font-size: 24px;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--accent-color);
-  line-height: 0;
-}
-
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+
+#stats {
+  padding: 20px 0; /* Reduce top and bottom padding */
+  margin-top: 0;
+}
 .stats .stats-item {
   padding: 30px;
   width: 100%;
@@ -661,7 +617,13 @@ section,
   display: block;
   font-size: 44px;
   float: left;
-  line-height: 0;
+}
+#stats .row {
+  margin-top: 0; /* Remove any extra margin above */
+  margin-bottom: 0; /* Remove any extra margin below */
+}
+#stats .container {
+  padding: 0; /* Remove any unnecessary padding */
 }
 
 .stats .stats-item .purecounter {
